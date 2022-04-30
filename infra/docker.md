@@ -5,3 +5,11 @@
 
 ## 도커 컨테이너 접속하기
 `docker exec -it "컨테이너 이름" bash` - 컨테이너의 bash에 접속
+
+## 리눅스에서 docker 위에 jenkins 올리기
+jenkins 볼륨을 설정해주고 리눅스에서 docker-compose를 통해 젠킨스를 실행하면 실행이 안된다.
+
+젠킨스 볼륨 권한이 문제가 되는데 docker-compose 실행하기 전에 미리 볼륨으로 사용할 폴더를 생성해주고 다음 명령어를 통해 권한을 주면 해결된다.
+```bash
+sudo chown 1000 [디렉터리 이름]
+```
