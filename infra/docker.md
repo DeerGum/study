@@ -13,3 +13,11 @@ jenkins 볼륨을 설정해주고 리눅스에서 docker-compose를 통해 젠�
 ```bash
 sudo chown 1000 [디렉터리 이름]
 ```
+
+### docker.sock permission denied 에러
+폴더 접근 권한이 없기 때문
+
+다음 명령어를 통해 실행
+```bash
+sudo chmod 666 /var/run/docker.sock
+```
